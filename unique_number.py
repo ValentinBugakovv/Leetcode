@@ -40,3 +40,15 @@ def get_unique_num(lst: list[int]) -> int:
 
 
 print(get_unique_num(example_list))
+
+from collection import defaultdict
+
+def f(arr: list) -> int:
+    dct = defaultdict(int) 
+    
+    for val in arr:
+        dct[val] += 1 #{1: 2, 4: 1}
+    
+    for key, val in dct.items(): 
+        if val == 1: 
+            return key # O(n)
