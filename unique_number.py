@@ -52,3 +52,9 @@ def f(arr: list) -> int:
     for key, val in dct.items(): 
         if val == 1: 
             return key # O(n)
+
+def find_unique_xor(arr: list[int]) -> int:
+    result = 0
+    for num in arr:
+        result ^= num
+    return result
